@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class parent{
+            constructor(){
+                this.surname = 'xyz'
+
+            }
+            // method(){
+            //     console.log('hi')
+            // }
+        }
+        class child extends parent{
+            constructor(){
+                super(name)
+                this.name = name
+            }
+        }
+        class child2 extends child{
+            constructor(){
+                super()
+                this.name = 'aaa'
+            }
+        }
+        var a=new child(surname = 'xyz')
+        console.log(a)
+
+    </script>
+</body>
+</html>

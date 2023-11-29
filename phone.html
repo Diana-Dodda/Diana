@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class mobile{
+            constructor(color,brand,charge){
+              this.color=color
+              this.brand=brand
+              this.initialcharge=charge
+              var currentcharge=0
+              let plugin = (charge)=>{
+                currentcharge = this.initialcharge + charge
+                if(currentcharge>100)
+                {
+                    throw 'battery fully charged'
+                }
+              }
+              this.finalcharge = function(c)
+              {
+                plugin(c)
+                return(currentcharge)
+              }
+            }
+        }
+        var a = new mobile('red', 'real', 50)
+         console.log(a.plugin(30))
+    </script>
+</body>
+</html>
